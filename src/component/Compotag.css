@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.compotag {
+  border-bottom: 3px solid black;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.compotag h3{
+  display: inline-block;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  text-transform: uppercase!important;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 200;
+  
+}

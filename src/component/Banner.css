@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&family=Lobster&family=Playfair+Display:wght@600&family=Ysabeau+Office:wght@100&display=swap');
+
+.banner {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    padding: 0.8em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/h104-696x464.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
+    filter: brightness(95%); /* Apply filter to the background image only */
+    filter: grayscale(30%);
+}
+
+.banner:hover {
+    background-size: 105%;
+}
+
+.banner .banner-tocken {
+    background-color: #505050;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.3em;
+    margin-left: 1em;
+    border-radius: 5px;
+    position: relative; /* Add position:relative to maintain stacking order */
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.banner:hover .banner-tocken {
+    background-color: rgb(9, 93, 93);
+}
+
+.banner h2,
+.banner p {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-family: 'Lobster', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Ysabeau Office', sans-serif;
+    margin: 0;
+}
+
+.banner h2 {
+    margin-top: 0.2em;
+    margin-bottom: 0.3em;
+    filter: brightness(120%); /* Apply filter only to the text */
+}
+
+.banner p {
+    font-size: 0.9rem;
+}
