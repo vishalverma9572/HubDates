@@ -15,6 +15,7 @@ export default function Homebanner() {
         title="WordPress News Magazine Charts the Most Chic and Fashionable Women of New York City"
         author="Vishal Kumar"
         date="August 29, 2023"
+        link="https://www.google.com/"
         showpara={true}
         />
     </div>
@@ -28,30 +29,35 @@ export default function Homebanner() {
           title="Game Changing Virtual Reality Console Hits the Market"
           author="Vishal Kumar"
           date="August 29, 2023"
+          link="https://www.google.com/"
           showpara={false}
           />
         </div>
         <div className='small-lower'>
+          <div className="left">
           <Banner
           backgroundImage="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/54-1-696x405.jpg"
-          width={46.15}
+          width={95}
           height={170}
           category="TRAVEL"
           title="Discover the Most Magical Sunset in Santoriniy"
           author="Vishal Kumar"
           date="August 29, 2023"
+          link="https://www.google.com/"
           showpara={false}
           />
-          <Banner
+          </div>
+          <div className="right"><Banner
           backgroundImage="https://demo.tagdiv.com/newspaper_pro/wp-content/uploads/2019/08/43-2-696x464.jpg"
-          width={46.15}
+          width={94}
           height={170}
           category="REVIEW"
           title="Computer Filters Noise to Make You a Better Listener"
           author="Vishal Kumar"
           date="August 29, 2023"
+          link="https://www.google.com/"
           showpara={false}
-          />
+          /></div>
         </div>
     </div>
     </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import './Banner.css';
 import { Link } from 'react-router-dom';
 
-export default function Banner({ backgroundImage, width, height, category, title, author, date,showpara}) {
+export default function Banner({ backgroundImage, width, height, category, title, author,link, date,showpara}) {
   const bannerStyle = {
     backgroundImage: `url('${backgroundImage}')`,
     width: `${width}%`,
@@ -14,6 +14,7 @@ export default function Banner({ backgroundImage, width, height, category, title
   return (
     
     <>
+    <a href={link}>
     <div className="banner" style={bannerStyle}>
       <div></div>
       <div className="banner-ctn">
@@ -23,6 +24,7 @@ export default function Banner({ backgroundImage, width, height, category, title
         {showpara && <p><span>{author} -</span><span> &nbsp;{date}</span></p> }
       </div>
     </div>
+    </a>
     </>
   );
 }

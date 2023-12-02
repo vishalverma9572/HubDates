@@ -17,10 +17,21 @@
     margin-right: 3px ;
 }
 .small-banner .small-lower{
-    display: flex;
+     display: flex;
     font-size: 0.55rem;
     justify-content: space-between;
-    /* height: 160px; */
+    height: 160px;
     margin-top: 5px;
 
+}
+.small-banner .small-lower .left{
+    width: 49%;
+}
+.small-banner .small-lower .right{
+    width: 49%;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  
 }
