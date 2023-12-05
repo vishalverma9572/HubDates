@@ -17,6 +17,7 @@
     border-radius: 3px;
     max-height: 125px;
     object-fit:cover;
+    filter: grayscale(35%);
     
 }
 .horicard .rightside{

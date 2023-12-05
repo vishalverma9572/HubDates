@@ -1,6 +1,10 @@
 import React from 'react';
+
 import Homebanner from './Homebanner';
 import Cont1_4 from '../component/Cont1_4';
+import Cont_5 from '../component/Cont_5';
+import Cont2_4 from '../component/Cont2_4';
+import Cardslider from '../component/Cardslider';
 
 export default function Home() {
   var articles = [
@@ -35,7 +39,7 @@ export default function Home() {
         "id": null,
         "name": "Forbes"
       },
-      "author": "Kris Holt, Contributor, \n Kris Holt, Contributor\n https://www.forbes.com/sites/krisholt/",
+      "author": "Kris Holt, Contributor",
       "title": "'Overwatch 2' Season 8 Patch Notes: Mauga, Balance Changes, Weapon Skins, MMR Decay And Much More",
       "description": "Just ahead of Season 8 of Overwatch 2 going live, Blizzard has revealed the full patch notes, including Mauga tweaks, other balance changes and details on weapon skins.",
       "url": "https://www.forbes.com/sites/krisholt/2023/12/04/overwatch-2-season-8-patch-notes-mauga-balance-changes-weapon-skins-mmr-decay-and-much-more/",
@@ -125,6 +129,23 @@ export default function Home() {
     article3={articles[2]}
     article4={articles[3]}
     article5={articles[4]}
+    />
+    <Cont2_4
+    article1={articles[0]}
+    article2={articles[5]}
+    article3={articles[2]}
+    article4={articles[6]}
+    article5={articles[4]}
+    article6={articles[1]}
+    />
+    {/* <Cardslider articles={articles}/> */}
+    <Cont_5
+    article1={articles[0]}
+    article2={articles[1]}
+    article3={articles[2]}
+    article4={articles[3]}
+    article5={articles[4]}
+    
     />
 
     </>

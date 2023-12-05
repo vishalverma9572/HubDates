@@ -1,0 +1,12 @@
+.container2_4{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+}
+.container2_4 .leftside{
+    width: 49.5%;
+}
+.container2_4 .rightside{
+    width: 49.5%;
+}
