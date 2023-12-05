@@ -1,0 +1,17 @@
+/* Allarticles.css */
+
+.allarticlecont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the gap between articles */
+    justify-content: space-between; /* Distribute articles evenly along the main axis */
+    margin: 20px; /* Add margin around the container */
+    width: 70%;
+    margin: auto;
+  }
+  
+  .allarticlecont .articles {
+    flex-basis:  31.33%;
+    /* width: 30.33%; */
+  }
+  

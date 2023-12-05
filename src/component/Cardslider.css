@@ -1,0 +1,51 @@
+/* Cardslider.css */
+.cardslider{
+    
+    width: 70%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+ .cardslider .spacard {
+    /* width: 98%; */
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding-top:25%;
+    padding-bottom: 25%;
+    margin-top: 1em;
+    display: flex;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  .cardslider .spacard:hover{
+    background-color: #145ba2;
+    transition: all .5s ease-in-out;
+  }
+  .cardslider .spacard:hover span{
+    color: white;
+  }
+
+  .cardslider .spacard span {
+    /* Add styles for the span element if needed */
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+  }
+.custom-prev-arrow,
+.custom-next-arrow {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 105%;
+  /* transform: translateY(-50%); */
+  font-size: 24px;
+}
+
+.custom-prev-arrow {
+  left: 25%;
+}
+
+.custom-next-arrow {
+  right: 25%;
+}
