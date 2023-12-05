@@ -14,11 +14,13 @@
     background-repeat: no-repeat;
     transition: background-size 0.3s ease-in-out;
     filter: brightness(95%); /* Apply filter to the background image only */
-    filter: grayscale(30%);
+    filter: grayscale(50%);
 }
 
-.banner:hover {
-    background-size: 105%;
+.banner:hover  {
+    transform: scale(1.015);
+    /* overflow:hidden; */
+    /* background-size: cover; */
 }
 
 .banner .banner-tocken {
@@ -33,7 +35,7 @@
 }
 
 .banner:hover .banner-tocken {
-    background-color: rgb(9, 93, 93);
+    background-color: rgba(8, 167, 167, 0.803);
 }
 
 .banner h2,
