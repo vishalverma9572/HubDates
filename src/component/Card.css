@@ -30,6 +30,7 @@
 }
 .card .author{
     font-size: 0.8rem;
-    margin-top: 5px;
+    
+    margin-top: -5px;
     margin-bottom: 5px;
 }

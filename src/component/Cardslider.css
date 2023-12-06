@@ -1,9 +1,16 @@
 /* Cardslider.css */
 .cardslider{
     
-    width: 70%;
+    width: 100%;
     margin: auto;
     margin-bottom: 5%;
+}
+.cardslider img{
+  max-height:150px ;
+}
+.cardslider h3{
+  line-height: 25px;
+  font-size: 1.2rem !important;
 }
  .cardslider .spacard {
     /* width: 98%; */

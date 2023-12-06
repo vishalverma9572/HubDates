@@ -2,9 +2,8 @@ import React from 'react';
 import Card from './Card';
 import './Allarticles.css'
 
-export default function Allarticles({ articles }) {
-const maxdesc = 125;
-  const maxtit = 75;
+export default function Allarticles({ articles, hoverColor,maxdesc , maxtit }) {
+
   return (
 
     <div className='allarticlecont'>
@@ -16,7 +15,7 @@ const maxdesc = 125;
               author={article ? article.author : ''}
               date={article ? article.publishedAt : ''}
               detail={article && article.description ? article.description.substring(0, maxdesc) + '...' : ''}
-              hoverColor="#3a863d"
+              hoverColor={hoverColor}
               width={100}
               showpara={false}
               link={article ? article.url : ''}

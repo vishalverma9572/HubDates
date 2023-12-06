@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.home_sec1,.home_sec3{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+    
+}
+.home_sec1 .left,.home_sec3 .left{
+    width: 69%;
+}
+.home_sec1 .right,.home_sec3 .right{
+
+    width: 29%;
+}
+.home_sec2{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+}
+.home_sec2 .left{
+    width: 71.5%;
+    
+}
+.home_sec2 .right{
+
+    width: 27%;
+}
+.bottomh3{
+    font-size: 1.5rem;
+    color: #001f3f;
+    text-align: center;
+    padding-top: 2rem;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+}
+ .right .font h3{
+    font-size: 1.1rem !important;
+}
+.home_sec1 .right .font .rightside:before{
+    content: url('https://api.iconify.design/solar/map-arrow-right-bold-duotone.svg?color=%23481762&width=23');
+    position:relative ;
+    right: 20px;
+    
+}
+.home_sec3 .right .font .rightside:before{
+    content: url('https://api.iconify.design/healthicons/health-outline.svg?color=%2330ab11&width=30');
+    position:relative ;
+    right: 20px;
+    
+}
+
+.home_sec2 .right .font1 .rightside h3{
+    font-size: 1rem !important;
+    line-height: 20px;
+}
+.home_sec2 .right .font1 .rightside .author{
+    font-size: 0.7rem !important;
+    line-height: 14px;
+    
+}
+.home_sec2 .right .font2 .rightside h3{
+    font-size: 1rem !important;
+    line-height: 20px;
+}
+.home_sec2 .right .font2 .rightside .author{
+    font-size: 0.7rem !important;
+    line-height: 14px;
+    
+}
+.home_sec2 .right .font2 .rightside:before{
+    content: url('https://api.iconify.design/ph/mask-happy-light.svg?color=%230851a8&width=20');
+    position:relative ;
+    right: 20px;
+    
+}
+.home_sec2 .right .font2{
+    padding-left: 0.2em;
+}
+
+
+
+
+/* StayConnected.css */
+.stay-connected {
+    
+    padding-left: 20px;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .social-icons a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .icon-container {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .icon-container span {
+    margin-left: 5px;
+    font-size: 1.3rem;
+    padding-left: 1.5rem;
+    text-align: center;
+  }
+  
+  

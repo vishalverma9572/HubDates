@@ -3,9 +3,8 @@ import Horicard from './Horicard'
 import './Cont_5.css'
 
 export default function Cont_5(props) {
-    const { article1, article2, article3, article4, article5 } = props;
-        let maxdesc=120;
-        let maxtit=75;
+    const { article1, article2, article3, article4, article5,hoverColor,maxdesc , maxtit, showpara,lwid ,rwid } = props;
+        
   return (
     <div className='container_5'>
         <Horicard
@@ -14,14 +13,14 @@ export default function Cont_5(props) {
             author={article1 ? article1.author : ""}
             date={article1 ? article1.publishedAt : ""}
             detail={article1 && article1.description ? article1.description.substring(0, maxdesc)+"...": ""}
-            hoverColor="#3a863d"
+            hoverColor={hoverColor}
             width={100}
-            showpara={true}
+            showpara={showpara}
             
             link={article1 ? article1.url : ""}
             height={245}
-            lwid={30}
-            rwid={68}
+            lwid={lwid}
+            rwid={rwid}
             />
             <Horicard
             imageUrl={article2 ? article2.urlToImage : ''}
@@ -29,14 +28,14 @@ export default function Cont_5(props) {
             author={article2 ? article2.author : ""}
             date={article2 ? article2.publishedAt : ""}
             detail={article2 && article2.description ? article2.description.substring(0, maxdesc)+"...": ""}
-            hoverColor="#3a863d"
+            hoverColor={hoverColor}
             width={100}
             
-            showpara={true}
+            showpara={showpara}
             link={article2 ? article2.url : ""}
             height={245}
-            lwid={30}
-            rwid={68}
+            lwid={lwid}
+            rwid={rwid}
             />
             <Horicard
             imageUrl={article3 ? article3.urlToImage : ''}
@@ -44,14 +43,14 @@ export default function Cont_5(props) {
             author={article3 ? article3.author : ""}
             date={article3 ? article3.publishedAt : ""}
             detail={article3 && article3.description ? article3.description.substring(0, maxdesc)+"...": ""}
-            hoverColor="#3a863d"
+            hoverColor={hoverColor}
             width={100}
             
-            showpara={true}
+            showpara={showpara}
             link={article3 ? article3.url : ""}
             height={245}
-            lwid={30}
-            rwid={68}
+            lwid={lwid}
+            rwid={rwid}
             />
             <Horicard
             imageUrl={article4 ? article4.urlToImage : ''}
@@ -59,14 +58,14 @@ export default function Cont_5(props) {
             author={article4 ? article4.author : ""}
             date={article4 ? article4.publishedAt : ""}
             detail={article4 && article4.description ? article4.description.substring(0, maxdesc)+"...": ""}
-            hoverColor="#3a863d"
+            hoverColor={hoverColor}
             width={100}
             
-            showpara={true}
+            showpara={showpara}
             link={article4 ? article4.url : ""}
             height={245}
-            lwid={30}
-            rwid={68}
+            lwid={lwid}
+            rwid={rwid}
             />
             <Horicard
             imageUrl={article5 ? article5.urlToImage : ''}
@@ -74,14 +73,14 @@ export default function Cont_5(props) {
             author={article5 ? article5.author : ""}
             date={article5 ? article5.publishedAt : ""}
             detail={article5 && article5.description ? article5.description.substring(0, maxdesc)+"...": ""}
-            hoverColor="#3a863d"
+            hoverColor={hoverColor}
             width={100}
             
-            showpara={true}
+            showpara={showpara}
             link={article5 ? article5.url : ""}
             height={245}
-            lwid={30}
-            rwid={68}
+            lwid={lwid}
+            rwid={rwid}
             />
             
     </div>

@@ -5,10 +5,12 @@ export default function Card({ imageUrl, cardTitle, author, date, detail, hoverC
 
   function changeColorOnHover(event) {
     event.currentTarget.querySelector('.myh3').style.color = hoverColor;
+    event.currentTarget.querySelector(' img').style.width = '100.5%';
   }
 
   function revertColor(event) {
     event.currentTarget.querySelector('.myh3').style.color = "black";
+    event.currentTarget.querySelector(' img').style.width = '100%';
   }
 
   const cardWidth = {

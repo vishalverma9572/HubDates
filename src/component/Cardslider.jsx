@@ -6,19 +6,18 @@ import Card from './Card';
 import { Icon } from '@iconify/react';
 import './Cardslider.css'; // Import your custom styles
 
-export default function Cardslider({ articles }) {
-  const maxdesc = 125;
-  const maxtit = 75;
+export default function Cardslider({ articles,hoverColor,maxdesc , maxtit }) {
+  
 
   const CustomPrevArrow = (props) => (
     <button {...props} className="custom-prev-arrow" style={{zIndex:3}}>
-      <Icon icon="carbon:previous-outline" color="#001f3f" />
+      <Icon icon="carbon:previous-outline" color={hoverColor} />
     </button>
   );
 
   const CustomNextArrow = (props) => (
     <button {...props} className="custom-next-arrow" style={{zIndex:3}}>
-      <Icon icon="carbon:next-outline" color="#001f3f" />
+      <Icon icon="carbon:next-outline" color={hoverColor} />
     </button>
   );
 
@@ -34,8 +33,7 @@ export default function Cardslider({ articles }) {
 
   return (
     <div className='cardslider'>
-      {/* Left Arrow Button */}
-      <CustomPrevArrow />
+      
 
       <Slider {...settings}>
         {articles.map((article, index) => (
@@ -46,7 +44,7 @@ export default function Cardslider({ articles }) {
               author={article ? article.author : ''}
               date={article ? article.publishedAt : ''}
               detail={article && article.description ? article.description.substring(0, maxdesc) + '...' : ''}
-              hoverColor="#3a863d"
+              hoverColor={hoverColor}
               width={100}
               showpara={false}
               link={article ? article.url : ''}

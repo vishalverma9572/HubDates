@@ -1,20 +1,14 @@
 import React from 'react';
 import Banner from '../component/Banner';
 import './Homebanner.css';
-import Compotag from '../component/Compotag'
+
 
 export default function Homebanner(props) {
   const { article1, article2, article3, article4 } = props;
 
   return (
     <>
-      <Compotag 
-      color="black"
-      text="Trending"
-      textcolor='White'
-      width={70}
-    
-      />
+      
       <div className="homebanner">
         <div className='big-banner'>
           <Banner
