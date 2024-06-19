@@ -2,10 +2,18 @@
 import React from 'react';
 import './Banner.css';
 import { Link } from 'react-router-dom';
+import defaultimg from '../resources/markus-winkler-aId-xYRTlEc-unsplash.jpg'
 
 export default function Banner({ backgroundImage, width, height, category, title, author,link, date,showpara}) {
+  let backgroundImg;
+  if(!backgroundImage){
+    backgroundImg=defaultimg
+  }
+  else{
+    backgroundImg=`url(${backgroundImage})`
+  }
   const bannerStyle = {
-    backgroundImage: `url('${backgroundImage}')`,
+    backgroundImage: backgroundImg,
     width: `${width}%`,
     height: `${height}px`,
 

@@ -1,8 +1,11 @@
 import React from 'react';
 import './Horicard.css';
+import defaultimg from '../resources/markus-winkler-aId-xYRTlEc-unsplash.jpg'
 
 export default function Card({ imageUrl, cardTitle, author, date, detail, hoverColor, width,lwid,rwid,link, showpara }) {
-
+  if (!imageUrl) {
+    imageUrl = defaultimg
+  }
   // Function to change color on hover
   function changeColorOnHover(event) {
     // Access the target element using event.currentTarget

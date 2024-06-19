@@ -1,8 +1,11 @@
 import React from 'react';
 import './Card.css';
+import defaultimg from '../resources/markus-winkler-aId-xYRTlEc-unsplash.jpg'
 
 export default function Card({ imageUrl, cardTitle, author, date, detail, hoverColor, width,height, showpara, link }) {
-
+  if(!imageUrl){
+    imageUrl=defaultimg
+  }
   function changeColorOnHover(event) {
     event.currentTarget.querySelector('.myh3').style.color = hoverColor;
     event.currentTarget.querySelector(' img').style.width = '100.5%';

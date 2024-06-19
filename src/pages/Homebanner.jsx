@@ -4,8 +4,10 @@ import './Homebanner.css';
 
 
 export default function Homebanner(props) {
-  const { article1, article2, article3, article4 } = props;
-
+  let { article1, article2, article3, article4,categories } = props;
+  if(!categories || categories.length<4){
+    categories={0:'General',1:'General',2:'General',3:'General'}
+  }
   return (
     <>
       
@@ -15,7 +17,7 @@ export default function Homebanner(props) {
             backgroundImage={article1 ? article1.urlToImage : ''}
             width={100}
             height={350}
-            category="FASHION"
+            category={categories[0]}
             title={article1 ? article1.title : ""}
             author={article1 ? article1.author : ""}
             date={article1 ? article1.publishedAt : ""}
@@ -29,7 +31,7 @@ export default function Homebanner(props) {
               backgroundImage={article2 ? article2.urlToImage : ''}
               width={94}
               height={160}
-              category="GADGETS"
+              category={categories[1]}
               title={article2 ? article2.title : ""}
               author={article2 ? article2.author : ""}
               date={article2 ? article2.publishedAt : ""}
@@ -43,7 +45,7 @@ export default function Homebanner(props) {
                 backgroundImage={article3 ? article3.urlToImage : ''}
                 width={95}
                 height={170}
-                category="TRAVEL"
+                category={categories[2]}
                 title={article3 ? article3.title : ""}
                 author={article3 ? article3.author : ""}
                 date={article3 ? article3.publishedAt : ""}
@@ -56,7 +58,7 @@ export default function Homebanner(props) {
                 backgroundImage={article4 ? article4.urlToImage : ''}
                 width={94}
                 height={170}
-                category="REVIEW"
+                category={categories[3]}
                 title={article4 ? article4.title : ""}
                 author={article4 ? article4.author : ""}
                 date={article4 ? article4.publishedAt : ""}

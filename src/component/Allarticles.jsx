@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
-import './Allarticles.css'
+import './Allarticles.css';
+
 
 export default function Allarticles({ articles, hoverColor,maxdesc , maxtit }) {
 

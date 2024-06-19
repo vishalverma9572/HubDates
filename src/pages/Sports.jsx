@@ -1,197 +1,11 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Icon } from "@iconify/react";
+import React from 'react'
+import Compotag from '../component/Compotag'
+import Cont1_4 from '../component/Cont1_4'
+import Cont2_4 from '../component/Cont2_4'
+import Cont_5 from '../component/Cont_5'
+import Allarticles from '../component/Allarticles'
 
-
-import "./Home.css";
-import Compotag from "../component/Compotag";
-import Homebanner from "./Homebanner";
-import Cont1_4 from "../component/Cont1_4";
-import Cont_5 from "../component/Cont_5";
-import Cont2_4 from "../component/Cont2_4";
-import Cardslider from "../component/Cardslider";
-import Allarticles from "../component/Allarticles";
-import Social from "../component/Social";
-
-
-
-export default function Home() {
-  const [topArticles, setTopArticles] = useState([]);
-  const [politicalArticles, setPoliticalArticles] = useState([]);
-  const [businessArticles, setBusinessArticles] = useState([]);
-  const [internationalArticles, setInternationalArticles] = useState([]);
-  const [technologyArticles, setTechnologyArticles] = useState([]);
-  const [scienceArticles, setScienceArticles] = useState([]);
-  const [sportsArticles, setSportsArticles] = useState([]);
-  const [healthArticles, setHealthArticles] = useState([]);
-  const [entertainmentArticles, setEntertainmentArticles] = useState([]);
-  const [lifestyleArticles, setLifestyleArticles] = useState([]);
-  const [cricketArticles, setCricketArticles] = useState([]);
-
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?country=in&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setTopArticles(response.data.articles);
-        
-      }
-      catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    }
-    fetchArticles();
-  }
-  , []);
-// fetch five political articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?country=in&category=politics&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setPoliticalArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-
-  // fetch Six business articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setBusinessArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-
-  // fetch five international articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?category=general&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setInternationalArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-  // fetch five technology articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setTechnologyArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-  // fetch five science articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setScienceArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-  // fetch five sports articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setSportsArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-  // fetch five health articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setHealthArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-  // fetch five entertainment articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setEntertainmentArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-  // fetch five lifestyle articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?q=lifestyle&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setLifestyleArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-  // fetch five cricket articles
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/top-headlines?country=in&q=cricket&apiKey=46cd4987ea434d5bb472ef13c1d2f1d2"
-        );
-        setCricketArticles(response.data.articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-    fetchArticles();
-  }, []);
-
-
-  
-
-  
-  const articles = [
+const articles = [
     {
       source: {
         id: null,
@@ -241,7 +55,7 @@ export default function Home() {
       content:
         "AT&amp;T shares were rising on Tuesday after the firm announced a new network deal with Ericsson.\r\nShares of AT&amp;T were up 3.9%. Ericsson shares were up 4.1%.\r\nThe company said it plans to spend u… [+226 chars]",
     },
-
+  
     {
       source: {
         id: "bloomberg",
@@ -275,7 +89,7 @@ export default function Home() {
       content:
         "More details are emerging about a data breach the genetic testing company 23andMe first reported in October. But as the company shares more information, the situation is becoming even murkier and cre… [+2456 chars]",
     },
-
+  
     {
       source: {
         id: null,
@@ -488,81 +302,50 @@ export default function Home() {
         "John Kerry, U.S. Special Envoy for Climate — having already pledged to close down all United States coal power plants — has committed to slashing the nation’s emissions from cooling-related products … [+4140 chars]",
     },
   ];
-  const categories = ["General","Political","Sports","Business"];
 
+
+export default function Sports() {
   return (
     <>
-      `{" "}
-      <Compotag
-        color="black"
-        text="Trending"
-        textcolor="White"
-        width={70}
-        bottom={10}
-      />
-      <Homebanner
-        article1={topArticles[0]}
-        article2={politicalArticles[0]}
-        article3={sportsArticles[0]}
-        article4={businessArticles[0]}
-        categories={categories}
+    <br />
 
-      />
-      <br />
-      <br />
-      <div className="home_sec1">
+    <div className="home_sec1">
         <div className="left">
-          <Compotag
-            color="#3a863d"
-            text="Political"
-            textcolor="White"
-            width={100}
-            bottom={-5}
-          />
-          <Cont1_4
-            article1={politicalArticles[0]}
-            article2={politicalArticles[1]}
-            article3={politicalArticles[2]}
-            article4={politicalArticles[3]}
-            article5={politicalArticles[4]}
-            hoverColor="#3a863d"
-            maxtit={50}
-            maxdesc={110}
-          />
-          <Compotag
-            color="#f9c100"
-            text="Business"
-            textcolor="black"
-            width={100}
-            bottom={10}
-          />
+            <Compotag
+                color="#481762"
+                text="Sports Trending"
+                textcolor="White"
+                width={100}
+                bottom={10}
+            />
+          
           <Cont2_4
-            article1={businessArticles[0]}
-            article2={businessArticles[1]}
-            article3={businessArticles[2]}
-            article4={businessArticles[3]}
-            article5={businessArticles[4]}
-            article6={businessArticles[5]}
-            hoverColor="#f9c100"
+            article1={articles[0]}
+            article2={articles[5]}
+            article3={articles[2]}
+            article4={articles[6]}
+            article5={articles[4]}
+            article6={articles[1]}
+            hoverColor="#481762"
             maxtit={65}
             maxdesc={115}
           />
         </div>
         <div className="right">
-          <Compotag
-            color="#481762"
-            text="International"
+        <Compotag
+            color="black"
+            text="Indian  Sports"
             textcolor="White"
             width={100}
             bottom={10}
-          />
+        />
           <div className="font">
             <Cont_5
-              article1={internationalArticles[0]}
-              article2={internationalArticles[1]}
-              article3={internationalArticles[2]}
-              article4={internationalArticles[3]}
-              article5={internationalArticles[4]}
+              article1={articles[0]}
+              article2={articles[1]}
+              article3={articles[2]}
+              article4={articles[3]}
+              article5={articles[4]}
               hoverColor="#481762"
               maxdesc={170}
               maxtit={75}
@@ -572,163 +355,42 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
-      <div className="home_sec2">
-        <div className="left">
-          <Compotag
-            color="#045843"
-            text="Sports"
-            textcolor="white"
-            width={100}
-            bottom={10}
-          />
-          <Cardslider articles={sportsArticles} hoverColor="#045843" maxtit={80} />
-          <br />
-          <Compotag
-            color="#145F5C"
-            text="Technology"
-            textcolor="White"
-            width={100}
-            bottom={10}
-          />
-          <Cont2_4
-            article1={technologyArticles[0]}
-            article2={technologyArticles[13]}
-            article3={technologyArticles[14]}
-            article4={technologyArticles[6]}
-            article5={technologyArticles[17]}
-            article6={technologyArticles[1]}
-            hoverColor="#145F5C"
-            maxtit={65}
-            maxdesc={115}
-          />
-        </div>
-        <div className="right">
-          <Compotag
-            color="#059d56 "
-            text="Cricket"
-            textcolor="White"
-            width={100}
-            bottom={10}
-          />
-          <div className="font1">
-            <Cont_5
-              article1={cricketArticles[0]}
-              article2={cricketArticles[1]}
-              article3={cricketArticles[2]}
-              article4={cricketArticles[3]}
-              // article5={articles[4]}
-              hoverColor="#059d56"
-              maxdesc={170}
-              maxtit={75}
-              showpara={false}
-              lwid={25}
-              rwid={73}
-            />
-          </div>
-          <Compotag
-            color="#0851A8 "
-            text="Lifestyle"
-            textcolor="White"
-            width={100}
-            bottom={10}
-          />
-          <div className="font2">
-            <Cont_5
-              article1={lifestyleArticles[0]}
-              article2={lifestyleArticles[1]}
-              article3={lifestyleArticles[2]}
-              article4={lifestyleArticles[3]}
-              article5={lifestyleArticles[4]}
-              hoverColor="#0851A8"
-              maxdesc={170}
-              maxtit={75}
-              showpara={false}
-              lwid={0}
-              rwid={95}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="home_sec3">
-        <div className="left">
-          <Compotag
-            color="#481762"
-            text="Science"
-            textcolor="White"
-            width={100}
-            bottom={10}
-          />
-          <Cont_5
-            article1={scienceArticles[0]}
-            article2={scienceArticles[1]}
-            article3={scienceArticles[2]}
-            article4={scienceArticles[3]}
-            article5={scienceArticles[4]}
-            hoverColor="#481762"
+    </div>
+    <br />
+    <br />
+
+    <div className="w-70">
+      <Compotag
+        color="#0d5089"
+        text="Cricket"
+        textcolor="White"
+        width={100}
+        bottom={10}
+      />
+      <Cont_5
+            article1={articles[0]}
+            article2={articles[1]}
+            article3={articles[2]}
+            article4={articles[3]}
+            article5={articles[4]}
+            hoverColor="#0d5089"
             maxdesc={250}
             maxtit={100}
             showpara={true}
             lwid={30}
             rwid={68}
           />
-
-          <br />
-          <Compotag
-            color="#0C2C75"
-            text="Entertainment"
-            textcolor="White"
-            width={100}
-            bottom={10}
-          />
-          <Cardslider articles={entertainmentArticles} hoverColor="#0C2C75" maxtit={80} />
-        </div>
-        <div className="right">
-          <Compotag
-            color="#30AB11"
-            text="Health"
-            textcolor="White"
-            width={100}
-            bottom={10}
-          />
-          <div className="font">
-            <Cont_5
-              article1={healthArticles[0]}
-              article2={healthArticles[1]}
-              article3={healthArticles[2]}
-              article4={healthArticles[3]}
-              article5={healthArticles[4]}
-              hoverColor="#30AB11"
-              maxdesc={170}
-              maxtit={75}
-              showpara={false}
-              lwid={0}
-              rwid={93}
-            />
-          </div>
-          <br />
-          <div className="stay-connected">
-            <Compotag
-              color="black"
-              text="Stay Connected"
-              textcolor="White"
-              width={100}
-              bottom={10}
-            />
-            <Social/>
-          </div>
-        </div>
       </div>
       <br />
       <br />
       <Compotag
-        color="#001f3f"
-        text="Top Articles"
+        color="#481762"
+        text="More in Sports"
         textcolor="White"
         width={70}
         bottom={10}
       />
-      <Allarticles articles={topArticles} hoverColor="#001f3f" width="30" />
+      <Allarticles articles={articles} hoverColor="#481762" width="30" />
     </>
-  );
+  )
 }
